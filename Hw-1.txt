@@ -1,0 +1,18 @@
+1. What is HTML? What does it do? HTML is Hyper Text Markup Language, the standard markup language for web page creations. HTML structures the webpage and the content to be added to it. 
+
+2. What is CSS? What does it do?  CSS is a cascading style sheet, which is the language used for styling and designing websites. CSS describes how HTML elements should be displayed on a webpage.
+
+3. Access https://www.fordham.edu/. In your own words, describe how this webpage uses structure to convey meaning and navigation options to the user. The web page structure demarcates articles of most significance on a responsive basis. When seen on a mobile device, the page will have an image and link to the most important article (implied in its size) take up the length of the entire screen, and on a desktop, it will be the largest article to the left of the others (our eyes naturally read from left to right). All colored text and text near an icon are implied to be clickable by the user. The most inquired topics: ‘About,’ ‘Mission,’ ‘Academics,’ etc., are dropdown menus when hovered over and direct links to each topic’s general info page when clicked. Overall, this structure of making the most important bigger, positioning to the left, and nesting links within links gives the user what one would assume to be an answer to any question they may have had upon arriving at the website. 
+
+4. What is an HTML element? Tag? Attribute? An HTML element is everything from the start tag to the end tag. The tag is an instruction that tells web browsers how to structure and display a webpage. An attribute is what provides addition information about HTML elements, like color or size.
+
+5. What are the parts of a CSS rule? The parts of a CSS rule are the selector and declaration block, the part that points to the HTML element that needs to be styled, and the part that contains the declaration(s).
+
+6. Explain how CSS rules cascade. They cascade by order of importance, if there is any conflict between rules then the most important style sheet will execute: browser defaults, external stylesheets, inline styles, and the user’s preferences. 
+
+7. If you have a directory called project-1 that contains two subdirectories, html-files and images. In the html-files directory you have an HTML file called html-1.html that has an img element with a src attribute, write out the value of the src attribute to access an image file called pinecone.jpg in the images directory. 
+
+
+	<img src = “../images/pinecone.jpg” alt = “Professor’s Cute Cat”>
+
+8. What is the default behavior when submitting a HTML form? When you submit an HTML form, the browser sends the info to a server (or the same page if no server is set). The page usually reloads, and depending on whether you're using "GET" or "POST," the data either gets added to the URL or sent behind the scenes.
