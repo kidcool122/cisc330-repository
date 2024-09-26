@@ -1,0 +1,54 @@
+<html>
+  
+  <head>
+    
+    <title>Hw-2 Flexbox</title>
+  
+  </head>
+  
+  <body>
+    
+    <div class="flex-container">
+      <div class="flex-child">div1</div>
+      <div class="flex-child">div2</div>
+      <div class="flex-child">div3</div>
+      <div class="flex-child">div4</div>
+    </div>
+    
+    <style>
+      
+      .flex-container {
+        border: 1px solid blue;
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .flex-child {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+      }
+
+      @media (max-width: 499px) {
+        .flex-container {
+          flex-direction: column;
+        }
+      }
+ 
+      @media (min-width: 500px) {
+        .flex-container {
+          flex-direction: row;
+        }
+      }
+    
+    </style>
+  
+  </body>
+
+</html>
