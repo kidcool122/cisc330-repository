@@ -1,0 +1,11 @@
+1. What is javascript? How does an interpreted programming language differ from a compiled language? Javascript is “a lightweight programming language commonly used by web developers to add dynamic interactions to web pages, applications, servers, and even games.” The difference between an interpreted programming language and a compiled language is that for the former, the source code is not directly translated by the target machine and is instead read and executed by an “interpreter”/different program.
+
+2. Contrast dynamically typed programming languages with statically typed ones. And contrast strongly typed programming languages with weakly typed ones. (google these) 
+Dynamically typed languages determine types at runtime, offering flexibility but risking type errors during execution. Statically typed languages check types at compile time, requiring type declarations and catching errors early. Strongly typed languages strictly enforce type rules, preventing implicit conversions, while weakly typed languages allow such conversions, offering flexibility but risking unexpected behavior. 
+
+3. What is the difference between var, let, and const when declaring variables in JS? 
+‘var’ is function-scoped, can be redeclared, and doesn't care about block scope, so it can cause problems with hoisting. ‘let’ is block-scoped and can be updated but not redeclared in the same block. ‘const’ is also block-scoped, but once it's assigned a value, it can't be changed or redeclared. Use let for variables that change and const for constants or variables that won't change.
+
+4. What are anonymous functions? Higher order functions? Callback functions? First class functions? Anonymous functions are functions without a name. Higher-order functions are functions that return a function or take other functions as arguments.  Callback functions pass as an argument to another function to be called later. First-class functions are functions in that language that are treated like other variable 
+
+5. Define objects in JavaScript. Objects in JavaScript are a collection of properties, an association between a name (or key) and a value. It is considered a non primitive data type, data types that store references to objects in memory. 
