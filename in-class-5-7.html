@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+
+    <style>
+      .container-color {
+        color: blue;
+      }
+    </style>
+
+    <script>
+      window.addEventListener('load', function(e) {
+
+        const containerDiv = document.getElementById('container');
+        
+        const textNode = document.createTextNode('in class 5');
+        containerDiv.appendChild(textNode);
+        
+        containerDiv.classList.add('container-color');
+      });
+    </script>
+  </head>
+  
+  <body>
+    <div id="container"></div>
+  </body>
+</html>

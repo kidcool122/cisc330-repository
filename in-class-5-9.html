@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>DOM with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+      .container-color {
+        color: blue;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function() {
+        
+        $('#container').text('in class 5').attr('class', 'container-color');
+
+        $('#event-button').on('click', function() {
+          $('<div></div>').text('new text').appendTo('#container');
+        });
+      });
+    </script>
+  </head>
+  
+  <body>
+    <div id="container"></div>
+    <button id="event-button">click me</button>
+  </body>
+</html>
