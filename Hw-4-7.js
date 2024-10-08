@@ -12,20 +12,24 @@ const cats = [
     { name: 'Max', adoptionStatus: 'available' },
     { name: 'Cleo', adoptionStatus: 'available' },
     { name: 'Lucy', adoptionStatus: 'not-available' },
-    { name: 'Daisy', adoptionStatus: 'available' }
+    { name: 'Daisy', adoptionStatus: 'available' },
 ];
 
-const adoptedCats = [];
+document.addEventListener('DOMContentLoaded', () => {
+    const listItems = document.querySelectorAll('#myList li');
+    const catsList = document.getElementById('cats-list');
 
-for (let i = 0; i < cats.length; i++) {
-    if (cats[i].adoptionStatus === 'available') {
-        adoptedCats.push(cats[i].name);
-    }
-}
+    listItems.forEach(item => {
+        item.addEventListener('click', () => {
+            listItems.forEach(li => {
+                li.style.color = 'blue'; 
+            });
+        });
+    });
 
-const sentence = `I have adopted these cats: ${adoptedCats.join(', ')}!`;
-
-console.log(sentence);
-
-const cat = { name: "Pinecone", age: 13, type: 'Munchkin', cuteness: 9001 };
-console.log(`Here's another cat: ${cat.name}, age ${cat.age}, type ${cat.type}, cuteness level ${cat.cuteness}.`);
+    cats.forEach(cat => {
+        const li = document.createElement('li');
+        li.textContent = cat.name; 
+        catsList.appendChild(li); 
+    });
+});
