@@ -1,0 +1,14 @@
+1. What is HTTP? What are the different HTTP request methods and how do they differ? Hyper Text Transfer Protocol dictates “how the internet handles communication between clients and servers, via requests and responses”, particularly for fetching resources like HTML documents or JSON data. The HTTP request methods are: GET, POST, PUT, PATCH, and DELETE. ‘GET’ is used to retrieve data, ‘POST’ is used to submit an entity to the specified resource, usually changing the server’s state, ‘PUT’ replaces all current representations of the target resource with the request payload, ‘PATCH’ partially modifies a resource, ‘DELETE’ deletes a resource.
+
+2. What is an API? What is JSON? Application programming interface “is a way for two or more computer programs or components to communicate with each other”. JavaScript object notation is “an open standard file format and data interchange format that uses human-readable text to store and transmit data objects consisting of attribute-value pairs and arrays
+
+3. What is AJAX? What is meant by asynchronous code? Asynchronous JavaScript and XML “allows web pages to be updated asynchronously by exchanging data with a web server behind the scenes” (without reloading the page). It is ‘asynchronous’ code because it allows code to run in the background without blocking the execution of other code.
+
+4. What is REST and what are resources? REST is an “architectural style of organizing code so that requests act upon resources in a standardized way”. Resources are defined as  “any information that can be named”.
+If my application had a concept called posts and was designed in a RESTful way, what would the URI and HTTP request method be to:
+a. retrieve multiple posts: HTTP GET, URL = /Posts
+b. retrieve a single post: HTTP GET, URL = /Posts/{Postid}
+c. save a post: HTTP POST, URL = /Posts/{Postid}
+d. update a post: HTTP PUT, URL = /Posts/{Postid}
+
+5. Define hoisting and closures in JS. Hoisting is JavaScript’s default behavior of moving declarations to the top, so “variables and functions within each execution context are created before they are executed” naturally. Closures are “the ability of a function to remember the variables and functions that are declared in its outer scope”.
