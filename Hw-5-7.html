@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe App</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <h1>Recipes</h1>
+    <button id="load-recipes">Load Recipes</button>
+    <div id="recipes-container"></div>
+
+    <h3 style="padding-top: 30px">Add a New Recipe</h3>
+    <div class="container">
+        <form id="recipe-form">
+            <div style="margin: 20px 0">
+                <label>Title</label>
+                <input type="text" id="title-input" name="title" required>
+            </div>
+            <div style="margin: 20px 0">
+                <label>Description</label>
+                <input type="text" id="description-input" name="description" required><br/>
+            </div>
+            <div style="margin: 20px 0">
+                <input type="submit" value="Add Recipe"><br/>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $('#load-recipes').on('click', function () {
+            $.get('http://localhost:3000', function (data) {
+                $('#recipes-container').empty();
+                data.forEach(function (recipe) {
+                    $('#recipes-container').append('<h3>' + recipe.title + '</h3><p>' + recipe.description + '</p>');
+                });
+            });
+        });
+
+        $('#recipe-form').on('submit', function (e) {
+            e.preventDefault();
+            var title = $('#title-input').val();
+            var description = $('#description-input').val();
+
+            var newRecipe = {
+                title: title,
+                description: description
+            };
+
+            $.ajax({
+                url: 'http://localhost:3000',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(newRecipe),
+                success: function () {
+                    $('#title-input').val('');
+                    $('#description-input').val('');
+                    $('#load-recipes').click(); 
+                }
+            });
+        });
+    </script>
+
+    <style>
+        .container {
+            width: 300px;
+        }
+
+        .container input {
+            width: 100%;
+        }
+
+        #recipes-container {
+            margin-top: 20px;
+        }
+    </style>
+
+</body>
+</html>
