@@ -1,10 +1,13 @@
 <?php
-// Require the requireMe.php file
-require 'requireMe.php';
 
-// Echo the required variable
-echo $requiredVariable;
+// Autoloading classes
+spl_autoload_register(function ($class) {
+    include str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
+});
 
-// Require the homework-6.html file
-require 'views/homework-6.html';
-?>
+// Reference the UserController
+use controllers\UserController;
+
+// Instantiate UserController and call index method
+$userController = new UserController();
+$userController->index();
