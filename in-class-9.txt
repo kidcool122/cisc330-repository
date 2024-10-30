@@ -6,4 +6,4 @@
 6. Data validation checks for the validity of data 
 7. a website can tell a browser to store data about the user in a text file called a cookie
 8. Sessions store information about a user and their preferences on the server 
-9. errors or exceptions def 
+9. Errors are messages that the PHP interpreter creates when it has a problem running code. Exceptions are when code that would normally run is prevented from doing so, by an exceptional situation
