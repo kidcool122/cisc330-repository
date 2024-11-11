@@ -17,7 +17,7 @@ class ErrorController {
         set_error_handler("app\controllers\myErrorHandler");
 
         try {
-            if (true) { // Replace this condition with actual logic
+            if (true) { 
                 throw new Exception('Custom error message!');
             }
 
@@ -30,8 +30,6 @@ class ErrorController {
         trigger_error('This is a custom triggered error!', E_USER_WARNING);
     }
 }
-
-// Instantiate the controller and call the function
 $controller = new ErrorController();
 $controller->viewErrors();
 
