@@ -1,0 +1,9 @@
+1. What is SQL? MySQL? What are relational databases? SQL is a standard language for database creation and manipulation. MySQL is a relational database program that uses SQL queries. Relational databases are databases that uses a structure that allows us to identify and access data in relation to another piece of data in the database.
+
+2. What is normalization in SQL? Normalization organizes the columns and tables of a database to ensure that database integrity constraints properly execute their dependencies.
+
+3. What are primary and foreign keys? Primary keys are the first column, used to identify that row. Foreign kets are the primary key of a row in a different table related to the current table
+
+4. What are the three relationship types? One-to-one, for every record in the primary table there is one and only one record in the foreign table. One-to-many, for every record in the primary table there are one or more related records in the foreign table. Many-to-many, for every record in the primary table there are many related records in the foreign table and for every record in the foreign table
+
+5. What is the difference between a left join and an inner join? Left join returns all records from the left able and the matching records from the right table, while inner join selects records that have matching values in both tables.
