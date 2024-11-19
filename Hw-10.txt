@@ -1,0 +1,11 @@
+1. What are PDOs? What is a DSN? PDOs are built in class that comes packaged with PHP to make it very easy for you to interact with databases
+represents and manages the connection to the database. DSN is a string that contains information about our connection
+
+2. What are .env files? What are .gitignore files? A .env file is a file containing environment variables, a variable whose value is set outside the program, typically through a functionality built into the operating system. A gitignore file is a text file that tells Git which files or folders to ignore in a project, we will need git to ignore our .env file
+
+3. Should you ever upload passwords of any kind to github? No, "you will probably get fired on the first day".
+
+4. What is SQL injection? A SQL injection hack is when a hacker tries to run malicious sql code in a database. 
+
+
+5. What are prepared statements? How can we pass variables to a prepared statement? A prepared statement is a parameterized and reusable SQL query which forces the developer to write the SQL command and the user-provided data separately. To pass variables to a prepared statement, you define the query with placeholders, bind the variables to those placeholders, and then execute the statement. 
